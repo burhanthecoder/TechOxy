@@ -1,0 +1,95 @@
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+* {
+    font-family: Public Sans, sans-serif !important;
+}
+#snack-container {
+    position: fixed !important;
+    left: 20px;
+    bottom: 20px;
+    z-index: 6500 ;
+    /* transform: translate(-50%,0); */
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all ease 700ms;
+}
+.snackbar {
+    padding: 10px 17px;
+    box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%), 0 16px 32px -4px rgb(145 158 171 / 24%);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 3000ms;
+    animation: fadein 0.5s, fadeout 0.5s 3000ms;
+    transition: all ease 700ms;
+}
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+.snackbar.error{
+    background-color: red;
+    color: white;
+}
+.snackbar.success{
+    background-color: #21d61e;
+    color: white;
+}
+.snackbar.info{
+    background-color: #0ac2d6;
+    color: white;
+}
+.snackbar.warning{
+    background-color: #F3B541;
+    color: white;
+}
+.snackbar.default{
+    background-color: #2F3037;
+    color: white;
+}
+.snack-message {
+    color: inherit !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #snack-container {
+        position: fixed !important;
+        left: 50%;
+        top: 20px;
+        bottom: auto;
+        z-index: 6500 ;
+        transform: translate(-50%,0);
+        justify-content: flex-start;
+        align-items: flex-start;
+        /* background-color: khaki; */
+        height: auto;
+        width: 80%;
+    }
+    
+}
